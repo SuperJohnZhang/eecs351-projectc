@@ -15,6 +15,56 @@
 		</canvas>
 	</div>
 
+	<div class="headLight">
+		<input id = "headAmbient" type="checkbox" name="ambient" value="headAmbient" checked="true"> HeadLight Ambient <br>
+		<input id = "headdiffuse" type="checkbox" name="diffuse" value="headdiffuse" checked="true"> HeadLight Diffuse <br>
+		<input id = "headspecular" type="checkbox" name="specular" value="headspecular" checked="true"> HeadLight Specular <br>
+	</div>
+
+	<div class="userLight">
+		<input id = "userAmbient" type="checkbox" name="ambient" value="userAmbient" checked="true"> UserLight Ambient
+		R: <input type="number" name="userL" value="">
+		G: <input type="number" name="userL" value="">
+		B: <input type="number" name="userL" value="">
+		<br>
+		<input id = "userdiffuse" type="checkbox" name="diffuse" value="userdiffuse" checked="true"> UserLight Diffuse
+		R: <input type="number" name="userL" value="">
+		G: <input type="number" name="userL" value="">
+		B: <input type="number" name="userL" value="">
+		<br>
+		<input id = "userspecular" type="checkbox" name="specular" value="userspecular" checked="true"> UserLight Specular
+		R: <input type="number" name="userL" value="">
+		G: <input type="number" name="userL" value="">
+		B: <input type="number" name="userL" value="">
+		<br>
+		Position:
+		X: <input type="number" name="userL" value="">
+		Y: <input type="number" name="userL" value="">
+		Z: <input type="number" name="userL" value="">
+		<br>
+		<button type="button" onclick="updateUserLight()">submit</button>
+	</div>
+	<div class='methods'>
+		<select onchange="changeShadingMode()" id = 'modeSelection'>
+		  <option value="1">Phong lighting with Phong Shading</option>
+		  <option value="2">Blinn-Phong lighting with Phong Shading</option>
+		  <option value="3">Phong lighting with Gouraud Shading</option>
+		  <option value="4" selected="true">Blinn-Phong lighting with Gouraud Shading</option>
+		</select>
+	</div>
+
+	<div class="instructions">
+		<h1> Instructions </h1>
+		<ul>
+			<li> Use up arrow for tilt up, down arrow for tilt down, left arrow for pan left and right arrow for pan right. </li>
+			<li> Use w and s to change the height of camera, a stands for moving left and d stands for moving right. Also, pressing <br>
+				i will move forward the camera and pressing o will move the camera backwards. </li>
+			<li> User could use the control pane in the upper part to switch on/off the headlight, adjust the parameter for user-adjusted <br>
+				light source and change the lighting and shading method. </li>
+		</ul>
+
+	</div>
+
 	<!-- the last part is js includes -->
 	<script type="text/javascript" src = 'lib/cuon-matrix-mod.js'></script>
 	<script type="text/javascript" src = 'lib/cuon-matrix-quat.js'></script>
